@@ -24,13 +24,13 @@ pulumi plugin install resource fortios <version> --server github://api.github.co
 
 Replace the version string `<version>` with your desired version.
 
-## Configuration for FortiGate  
+## Configuration for FortiGate
 
 ### Example usage
 
 {{< chooser language "typescript,python,go,csharp,yaml" >}}
 
-{{% choosable language typescript %}}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -220,7 +220,7 @@ If it is used for testing, you can set `insecure` to `true` and unset
 
 {{< chooser language "typescript,python,go,csharp,yaml" >}}
 
-{{% choosable language typescript %}}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -413,7 +413,7 @@ be added.
 
 {{< chooser language "typescript,python,go,csharp,yaml" >}}
 
-{{% choosable language typescript %}}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -635,7 +635,7 @@ The following arguments are supported:
 
 {{< chooser language "typescript,python,go,csharp,yaml" >}}
 
-{{% choosable language typescript %}}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as fortios from "@pulumiverse/fortios";
@@ -830,7 +830,7 @@ following example as a reference:
 
 {{< chooser language "typescript,python,go,csharp,yaml" >}}
 
-{{% choosable language typescript %}}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1313,18 +1313,22 @@ config:
     Pulumi.yaml:
 
     ```yaml
-    provider "fortios" {
-      hostname = "192.168.52.111"
-      token    = "nx6nbGn8tnFddaa3Qy79jpjfsyw1"
-      insecure = "true"
-    }
+    name: Fortios
+    runtime: yaml
+    config:
+      fortios:hostname:
+        value: 192.168.52.111
+      fortios:insecure:
+        value: "true"
+      fortios:token:
+        value: nx6nbGn8tnFddaa3Qy79jpjfsyw1
     ```
 
     Language dependent resource:
 
     {{< chooser language "typescript,python,go,csharp,yaml" >}}
 
-    {{% choosable language typescript %}}}
+    {{% choosable language typescript %}}
 
     ```typescript
     import * as pulumi from "@pulumi/pulumi";
@@ -1394,7 +1398,7 @@ config:
     using Pulumi;
     using Fortios = Pulumiverse.Fortios;
 
-    return await Deployment.RunAsync(() => 
+    return await Deployment.RunAsync(() =>
     {
         var fglobal = new Fortios.System.Global("fglobal", new()
         {
@@ -1438,11 +1442,15 @@ config:
    then re-apply Pulumi:
 
     ```yaml
-    provider "fortios" {
-      hostname = "192.168.52.111:8443"
-      token    = "nx6nbGn8tnFddaa3Qy79jpjfsyw1"
-      insecure = "true"
-    }
+    name: Fortios
+    runtime: yaml
+    config:
+      fortios:hostname:
+        value: 192.168.52.111:8443
+      fortios:insecure:
+        value: "true"
+      fortios:token:
+        value: nx6nbGn8tnFddaa3Qy79jpjfsyw1
     ```
 
 ## Sort security policies
