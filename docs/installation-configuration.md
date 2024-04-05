@@ -1326,9 +1326,9 @@ config:
 
     Language dependent resource:
 
-    {{< chooser language "typescript,python,go,csharp,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,yaml" >}}
 
-    {{% choosable language typescript %}}
+{{% choosable language typescript %}}
 
     ```typescript
     import * as pulumi from "@pulumi/pulumi";
@@ -1343,9 +1343,9 @@ config:
     });
     ```
 
-    {{% /choosable %}}
+{{% /choosable %}}
 
-    {{% choosable language python %}}
+{{% choosable language python %}}
 
     ```python
     import pulumi
@@ -1359,9 +1359,9 @@ config:
         admin_ssh_port=22)
     ```
 
-    {{% /choosable %}}
+{{% /choosable %}}
 
-    {{% choosable language go %}}
+{{% choosable language go %}}
 
     ```go
     package main
@@ -1388,9 +1388,9 @@ config:
     }
     ```
 
-    {{% /choosable %}}
+{{% /choosable %}}
 
-    {{% choosable language csharp %}}
+{{% choosable language csharp %}}
 
     ```csharp
     using System.Collections.Generic;
@@ -1412,9 +1412,9 @@ config:
     });
     ```
 
-    {{% /choosable %}}
+{{% /choosable %}}
 
-    {{% choosable language yaml %}}
+{{% choosable language yaml %}}
 
     ```yaml
     resources:
@@ -1428,9 +1428,9 @@ config:
           adminSshPort: 22
     ```
 
-    {{% /choosable %}}
+{{% /choosable %}}
 
-    {{< /chooser >}}
+{{< /chooser >}}
 
     Then execute "Pulumi init; Pulumi plan; Pulumi apply". After a few seconds
     or more (depending on your network situation), then press `Ctrl+C` to end
